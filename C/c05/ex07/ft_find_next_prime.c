@@ -1,28 +1,13 @@
 #include <unistd.h>
 
-int ft_sqrt(int nb)
-{
-  int root;
-  
-  root = 0;
-  while (root * root < nb)
-    root++;
-  if (root * root == nb)
-    return (root);
-  else
-    return (0);
-}
-
 int ft_is_prime(int nb)
 {
   int i;
-  int sq;
   
   i = 2;
-  sq = ft_sqrt(nb);
   if （nb < 2)
     return (0);
-  while (i < sq)
+  while (i < nb / 2)
   {
     if (nb % i == 0)
       return (0);
@@ -42,5 +27,10 @@ int ft_find_next_prime(int nb)
 int 	main(void)
 {
 printf("%d",ft_find_next_prime(4));	
+	return (0);
+}
+int 	main(void)
+{
+	printf("%d",ft_find_next_prime(100000));	
 	return (0);
 }
